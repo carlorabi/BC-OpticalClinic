@@ -280,7 +280,7 @@ button[class ^= navbar]:hover{
             justify-content: center;
 }
 .header-inner-right{
-    margin-top: 6rem;
+    margin-top: auto;
 }
 .header-inner-right img{
     max-height: fit-content;
@@ -334,8 +334,8 @@ button[class ^= navbar]:hover{
 .img {
     background-image: url('images/doctor.jpg');
     background-size: cover;
-    background-position: center;
-    width: 75%; /* Ensure the container takes up the full width */
+    background-position: top;
+    width: 75%;/* Ensure the container takes up the full width */
      /* This creates a 4:3 aspect ratio, adjust as needed */
 }
 
