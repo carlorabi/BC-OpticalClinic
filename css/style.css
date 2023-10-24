@@ -283,7 +283,8 @@ button[class ^= navbar]:hover{
     margin-top: 6rem;
 }
 .header-inner-right img{
-    max-width: 520px;
+    max-height: fit-content;
+    max-width: 800px;
     margin: 0 auto;
 }
 
