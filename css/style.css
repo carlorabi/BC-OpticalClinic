@@ -281,20 +281,27 @@ button[class ^= navbar]:hover{
 }
 .header-inner-right{
     margin-top: auto;
+    margin-right: 4em;
 }
 .header-inner-right img{
-    max-height: fit-content;
-    max-width: 800px;
+    padding-top: 1em;
+    padding-right: 10em;
+    height: 480px;
+    width: 800px;
     margin: 0 auto;
 }
 
 /* about section */
 .section-head h2{
+    margin-top: -3rem;
     font-size: 4rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     text-align: center;
 }
+.text-lg {
+    font-size: 18px; /* Adjust this value to your desired font size */
+  }
 .border-line{
     height: .4rem;
     width: 100%;
@@ -320,23 +327,23 @@ button[class ^= navbar]:hover{
 }
 
 .about-left .text{
-    margin: 5.6rem 0;
+    margin: 4.6rem 0;
     line-height: 2.3;
 }
 .about .btn-white{
     color: var(--dark-gray);
 }
 
-
-.about-right {
-    position: relative;
+.about-right{
+    height: 30%;
+    width: 60%;
 }
-.img {
-    background-image: url('images/doctor.jpg');
-    background-size: cover;
-    background-position: top;
-    width: 75%;/* Ensure the container takes up the full width */
-     /* This creates a 4:3 aspect ratio, adjust as needed */
+.about-right img {
+    padding-right: 3em;
+    max-height: fit-content;
+    width: 400px;
+    margin-left: -2.5em;
+    margin-top: -10em;
 }
 
 /* banner one section */
@@ -344,7 +351,8 @@ button[class ^= navbar]:hover{
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 80, 213, 0.9)), to(rgba(0, 90, 213, 0.85))), url('../images/banner-1-img.png') top/cover no-repeat;
     background: -o-linear-gradient(rgba(0, 80, 213, 0.9), rgba(0, 90, 213, 0.85)), url('../images/banner-1-img.png') top/cover no-repeat;
     background: linear-gradient(rgba(0, 80, 213, 0.9), rgba(0, 90, 213, 0.85)), url('../images/banner-1-img.png') top/cover no-repeat;
-    height: 480px;
+    height: 380px;
+    margin-top: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -385,6 +393,7 @@ button[class ^= navbar]:hover{
     background-color: var(--light-gray);
 }
 .services-inner{
+    font-size: 14px;
     padding: 6rem 0;
 }
 .service-item{
@@ -601,19 +610,50 @@ button[class ^= navbar]:hover{
 
 
 /* Media Queries */
-@media(min-width: 450px){
+@media (max-width: 375px) or (max-width: 414px) {
+    .navbar{
+        height: 10%;
+        width: 100%;
+        padding: 3.2rem 0;
+    }
+    .navbar-hide-btn{
+        width: 30px;
+        margin-right: 1em;
+    }
     .navbar-collapse{
-        width: 320px;
+        width: 300px;
     }
     .btn-group .btn{
         width: auto;
     }
     .btn-group .btn:first-child{
         margin-right: 48px;
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
     .border-line{
-        width: 405px;
+        width: 250px;
+    }
+    .about-left{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .about-left .section-head h2{
+        text-align: center;
+        font-size: 45px;
+    }
+    .about-right img {
+        position: center;
+        max-height: fit-content;
+        width: 300px;
+        margin-left: 2em;
+        margin-top: -10em;
+        margin-top: -1em;
+    }
+
+    .banner-one{
+        height: 280px;
+        margin-top: 0px;
     }
 
 }
@@ -704,9 +744,13 @@ button[class ^= navbar]:hover{
                 transform: translateX(0);
     }
     .about-right{
+        height: 35%;
+        width: 65%;
+        margin-right: 2%;
         margin-left: auto;
         margin-top: 11.2rem;
     }
+
 
     .banner-two .container{
         grid-template-columns: repeat(2, 1fr);
