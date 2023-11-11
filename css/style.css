@@ -41,6 +41,7 @@ a{
 }
 .bg-blue{
     background-color: var(--fros-blue-color);
+    height: 500px;
 }
 .bg-white{
     background-color: var(--light-color);
@@ -96,10 +97,6 @@ a{
 .btn-group .btn:first-child{
     margin-bottom: 2rem;
 }
-.btn:hover{
-    -webkit-box-shadow: var(--box-shadow);
-            box-shadow: var(--box-shadow);
-}
 
 .container{
     max-width: 95vw;
@@ -151,11 +148,6 @@ h1, h2, h3{
 .text-center{
     text-align: center;
 }
-
-/* header */
-.header{
-    min-height: 100vh;
-}
 .navbar{
     background-color: #250dda;
     position: fixed;
@@ -174,6 +166,13 @@ h1, h2, h3{
 .navbar-brand img{
     width: 80px;
     height: 35px;
+}
+.nav-item a i.fas.fa-sign-in-alt {
+    font-size: 15px;
+    
+}
+.nav-item a span.btn-text {
+    font-size: 13px;
 }
 .navbar-show-btn, .navbar-hide-btn{
     background-color: transparent;
@@ -245,49 +244,97 @@ button[class ^= navbar]:hover{
         -ms-transform: translateX(10px);
             transform: translateX(10px);
 }
+/*header*/
+/* Style the header */
+.header {
+    background-color: rgba(12, 52, 215, 0.9); /* Your background color */
+    color: #fff; /* Text color for the header */
+    padding: 10px 0; /* Adjust padding as needed */
+}
+
+/* Style the navbar */
+.navbar {
+    background-color: #3d1dce; /* Your background color */
+    padding: 10px 0; /* Adjust padding as needed */
+    height: 75px;
+}
+
+/* Style the logo */
+.navbar-brand img {
+    max-width: 100%; /* Ensure the logo scales down as needed */
+}
+
+/* Style the navigation items */
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between; /* Distribute items horizontally */
+    align-items: center; /* Vertically align items in the middle */
+    padding: 0 10px; /* Adjust padding as needed */
+}
+
+/* Style the navigation links */
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-right: 20px; /* Adjust spacing between items */
+}
+
+/* Style the login button */
+.btn-white {
+    background-color: #fff;
+    color: #000000; /* Text color for the button */
+    padding: 8px 8px; /* Adjust padding as needed */
+    margin-top: 0.5em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+}
+.logo-icon {
+    margin-right: 10px; /* Adjust spacing between icon and text */
+}
+
+/* Style the navigation links */
+.nav-link {
+    margin-top: 1em;
+    text-decoration: none;
+    color: #fff; /* Text color for the links */
+}
+
+/*header*/
+
 
 /* header inner */
-.header-inner{
-    padding-top: 2rem;
-
-.header-inner-left {
-        padding-top: 100px;
+.clinicname {
+    display: block;
+    font-size: 40px;
 }
-}
-.header-inner-left h1{
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 0;
-
-}
-.header-inner-left h1 span{
-    font-size: 4rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-.header-inner-left .lead{
-    opacity: 0.9;
+.oc {
+    display: block;
+    text-transform: uppercase; /* Convert text to uppercase if needed */
 }
 .header-inner-left .text{
+    font-size: 90%;
     margin: 5.8rem 0;
     max-width: 500px;
     margin-right: auto;
     margin-left: auto;
 }
-.header-inner-left .btn-group{
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
+
 .header-inner-right{
     margin-top: auto;
     margin-right: 4em;
 }
 .header-inner-right img{
-    padding-top: 1em;
+    padding-top: 10em;
+    padding-bottom: 5.1em;
     padding-right: 10em;
-    height: 480px;
-    width: 800px;
+    width: 900px;
+    height: 650px;
     margin: 0 auto;
 }
 
@@ -323,12 +370,13 @@ button[class ^= navbar]:hover{
     background-color: var(--light-blue-color);
 }
 .about-left{
-    margin-bottom: 6rem;
+    margin-bottom: 0rem;
 }
 
 .about-left .text{
     margin: 4.6rem 0;
     line-height: 2.3;
+    text-align: justify;
 }
 .about .btn-white{
     color: var(--dark-gray);
@@ -373,9 +421,13 @@ button[class ^= navbar]:hover{
 }
 
 /* services section */
+.services .section-head {
+    margin-top: -150px; /* Adjust the margin-top value as needed */
+}
+
 .services .section-head .text-lg{
     color: var(--dark-gray);
-    margin-top: -2rem;
+    margin-top: 20px;
 }
 .services .section-head img{
     margin: 3.7rem auto;
@@ -396,6 +448,9 @@ button[class ^= navbar]:hover{
     font-size: 14px;
     padding: 6rem 0;
 }
+.services-inner .text {
+    text-align: justify;
+}
 .service-item{
     padding: 3rem;
     margin-bottom: 3rem;
@@ -414,51 +469,35 @@ button[class ^= navbar]:hover{
     opacity: 0.7;
 }
 
-.banner-two-left img{
-    max-width: 620px;
-    margin: auto;
-}
-.banner-two-right .lead{
-    font-size: 2.2rem;
-    margin-top: 6rem;
-}
-.banner-two-right .btn-group{
-    margin-top: 6rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
-
 /* clinic panel */
-.clinic-panel-inner{
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 80, 213, 0.9)), to(rgba(0, 90, 213, 0.85))), url('../images/banner-1-img.png') top/cover no-repeat;
-    background: -o-linear-gradient(rgba(0, 80, 213, 0.9), rgba(0, 90, 213, 0.85)), url('../images/banner-1-img.png') top/cover no-repeat;
+.clinic-panel-inner {
     background: linear-gradient(rgba(0, 80, 213, 0.9), rgba(0, 90, 213, 0.85)), url('../images/banner-1-img.png') top/cover no-repeat;
-    padding-bottom: 0%;
-    padding-top: 0%;
-    margin-top: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
-.clinic-panel-item{
 
-    margin-bottom: 2px;
+.clinic-panel-item {
+    margin: 0 10px; /* Add space to the left and right of each item */
 }
-.clinic-panel-item:last-child{
-    margin-bottom: 0;
+
+.clinic-panel-item:last-child {
+    margin-right: 0; /* Remove right margin from the last item */
 }
+
 .clinic-panel-item .img {
     position: relative;
-    height: 400px;
-    width: 400px; 
+    height: 300px;
+    width: 300px;
     overflow: hidden;
-    align-content: center;
-    flex-wrap: wrap;
+    align-content: center; /* This should be "align-items" for centering vertically */
+    display: flex; /* Add display: flex for centering vertically */
+    justify-content: center; /* Center the content horizontally */
 }
 
-.clinic-panel-item .img{
-    max-width: 357px;
-    margin-left: auto;
-    margin-right: auto;
-}
 /* package service */
 .package-service-inner{
     margin-top: 14rem;
@@ -523,84 +562,19 @@ button[class ^= navbar]:hover{
   }
 
 /* footer */
-.footer{
+.footer {
     background-color: var(--dark-color);
-    height: 83px;
-}
-.footer-item{
-    margin-bottom: 3rem;
-}
-.footer-item:last-child{
-    margin-bottom: 0;
-}
-.footer-head{
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 2.4rem;
-    margin-bottom: 4rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer-item .text{
-    padding: 3rem 0;
-    max-width: 500px;
-    margin-right: auto;
-    margin-left: auto;
+.footer p {
+    margin: 0; /* Reset default margin */
+    font-size: 12px;
+    color: #fff;
 }
-.footer-item address{
-    font-size: 1.5rem;
-    font-style: normal;
-}
-.footer-item .tags-list{
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-}
-.footer-item .tags-list li{
-    margin: .5rem 1rem;
-    padding: .5rem 1rem;
-    background-color: rgb(58, 58, 58);
-    border-radius: .4rem;
-}
-.footer-item a{
-    margin-bottom: 1rem;
-    display: inline-block;
-    -webkit-transition: var(--transition);
-    -o-transition: var(--transition);
-    transition: var(--transition);
-}
-.footer-item a:hover{
-    color: var(--dark-gray);
-}
-.footer-item:last-child .text{
-    padding-top: 0;
-}
-.footer-item .appointment-info li{
-    margin: 1rem 0;
-}
-.footer-item .appointment-info li span{
-    margin-left: 1rem;
-}
-.footer-links{
-    border-top: 2px solid var(--dark-gray);
-    padding: 4.5rem 0;
-}
-.footer-links li{
-    margin: 0 2.4rem;
-    font-size: 2rem;
-}
-.footer-links li a{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--light-color);
-    -webkit-transition: var(--transition);
-    -o-transition: var(--transition);
-    transition: var(--transition);
-}
-.footer-links li a:hover{
-    background-color: var(--light-color);
-    color: var(--fros-blue-color);
-}
-
 
 /* Media Queries */
 @media (max-width: 375px) or (max-width: 414px) {
